@@ -11,7 +11,7 @@
     "noUnusedParameters": true,
     "strict": true,
     "module": "ESNext",
-    "moduleResolution": "Node",
+    "moduleResolution": "Bundler",
     "resolveJsonModule": true,
     "noEmit": true,
     "allowJs": true,
