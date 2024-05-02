@@ -10,23 +10,31 @@ npm i @mrcaidev/http-errors
 
 ## 🛠️ Usage
 
-Standard:
+Default:
 
 ```ts
 import { BadRequestError } from "@mrcaidev/http-errors";
 
-throw new BadRequestError("Invalid data format");
+throw new BadRequestError();
 ```
 
-Customization:
+Customized error message:
+
+```ts
+import { BadRequestError } from "@mrcaidev/http-errors";
+
+throw new BadRequestError("Malformed data");
+```
+
+Dynamic status code and error message:
 
 ```ts
 import { HttpError } from "@mrcaidev/http-errors";
 
-throw new HttpError(400, "Invalid data format");
+throw new HttpError(400, "Malformed data");
 ```
 
-Hover over the error class to see its definition and the link to its RFC.
+Hover the mouse over the error class to view its definition and RFC link.
 
 ![Hover information](assets/hover-info.jpg)
 
