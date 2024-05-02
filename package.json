@@ -19,10 +19,6 @@
     "email": "mrcaidev@gmail.com",
     "url": "https://mrcai.dev"
   },
-  "repository": {
-    "url": "https://github.com/mrcaidev/http-errors.git",
-    "type": "git"
-  },
   "type": "module",
   "files": [
     "dist"
@@ -35,6 +31,10 @@
       "import": "./dist/index.js",
       "require": "./dist/index.umd.cjs"
     }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrcaidev/http-errors.git"
   },
   "scripts": {
     "build": "vite build"
