@@ -1,19 +1,16 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, test } from "vitest";
 import { PreconditionRequiredError } from "./428-precondition-required";
 
 describe("428 Precondition Required", () => {
-  it("has correct status code", () => {
+  test("default behavior", () => {
     const error = new PreconditionRequiredError();
     expect(error.status).toEqual(428);
+    expect(error.message).toEqual("Precondition Required");
   });
 
-  it("has default message", () => {
-    const error = new PreconditionRequiredError();
-    expect(error.message).toEqual("Precondition required");
-  });
-
-  it("can customize message", () => {
+  test("customized error message", () => {
     const error = new PreconditionRequiredError("Test");
+    expect(error.status).toEqual(428);
     expect(error.message).toEqual("Test");
   });
 });

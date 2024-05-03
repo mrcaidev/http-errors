@@ -1,19 +1,16 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, test } from "vitest";
 import { ForbiddenError } from "./403-forbidden";
 
 describe("403 Forbidden", () => {
-  it("has correct status code", () => {
+  test("default behavior", () => {
     const error = new ForbiddenError();
     expect(error.status).toEqual(403);
-  });
-
-  it("has default message", () => {
-    const error = new ForbiddenError();
     expect(error.message).toEqual("Forbidden");
   });
 
-  it("can customize message", () => {
+  test("customized error message", () => {
     const error = new ForbiddenError("Test");
+    expect(error.status).toEqual(403);
     expect(error.message).toEqual("Test");
   });
 });

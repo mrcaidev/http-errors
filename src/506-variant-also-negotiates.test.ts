@@ -1,19 +1,16 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, test } from "vitest";
 import { VariantAlsoNegotiatesError } from "./506-variant-also-negotiates";
 
 describe("506 Variant Also Negotiates", () => {
-  it("has correct status code", () => {
+  test("default behavior", () => {
     const error = new VariantAlsoNegotiatesError();
     expect(error.status).toEqual(506);
+    expect(error.message).toEqual("Variant Also Negotiates");
   });
 
-  it("has default message", () => {
-    const error = new VariantAlsoNegotiatesError();
-    expect(error.message).toEqual("Variant also negotiates");
-  });
-
-  it("can customize message", () => {
+  test("customized error message", () => {
     const error = new VariantAlsoNegotiatesError("Test");
+    expect(error.status).toEqual(506);
     expect(error.message).toEqual("Test");
   });
 });

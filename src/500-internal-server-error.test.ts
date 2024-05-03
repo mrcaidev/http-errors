@@ -1,19 +1,16 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, test } from "vitest";
 import { InternalServerError } from "./500-internal-server-error";
 
 describe("500 Internal Server Error", () => {
-  it("has correct status code", () => {
+  test("default behavior", () => {
     const error = new InternalServerError();
     expect(error.status).toEqual(500);
+    expect(error.message).toEqual("Internal Server Error");
   });
 
-  it("has default message", () => {
-    const error = new InternalServerError();
-    expect(error.message).toEqual("Internal server error");
-  });
-
-  it("can customize message", () => {
+  test("customized error message", () => {
     const error = new InternalServerError("Test");
+    expect(error.status).toEqual(500);
     expect(error.message).toEqual("Test");
   });
 });

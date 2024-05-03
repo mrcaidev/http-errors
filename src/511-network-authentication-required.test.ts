@@ -1,19 +1,16 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, test } from "vitest";
 import { NetworkAuthenticationRequiredError } from "./511-network-authentication-required";
 
 describe("511 Network Authentication Required", () => {
-  it("has correct status code", () => {
+  test("default behavior", () => {
     const error = new NetworkAuthenticationRequiredError();
     expect(error.status).toEqual(511);
+    expect(error.message).toEqual("Network Authentication Required");
   });
 
-  it("has default message", () => {
-    const error = new NetworkAuthenticationRequiredError();
-    expect(error.message).toEqual("Network authentication required");
-  });
-
-  it("can customize message", () => {
+  test("customized error message", () => {
     const error = new NetworkAuthenticationRequiredError("Test");
+    expect(error.status).toEqual(511);
     expect(error.message).toEqual("Test");
   });
 });

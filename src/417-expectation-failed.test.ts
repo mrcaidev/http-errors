@@ -1,19 +1,16 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, test } from "vitest";
 import { ExpectationFailedError } from "./417-expectation-failed";
 
 describe("417 Expectation Failed", () => {
-  it("has correct status code", () => {
+  test("default behavior", () => {
     const error = new ExpectationFailedError();
     expect(error.status).toEqual(417);
+    expect(error.message).toEqual("Expectation Failed");
   });
 
-  it("has default message", () => {
-    const error = new ExpectationFailedError();
-    expect(error.message).toEqual("Expectation failed");
-  });
-
-  it("can customize message", () => {
+  test("customized error message", () => {
     const error = new ExpectationFailedError("Test");
+    expect(error.status).toEqual(417);
     expect(error.message).toEqual("Test");
   });
 });

@@ -1,19 +1,16 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, test } from "vitest";
 import { LockedError } from "./423-locked";
 
 describe("423 Locked", () => {
-  it("has correct status code", () => {
+  test("default behavior", () => {
     const error = new LockedError();
     expect(error.status).toEqual(423);
-  });
-
-  it("has default message", () => {
-    const error = new LockedError();
     expect(error.message).toEqual("Locked");
   });
 
-  it("can customize message", () => {
+  test("customized error message", () => {
     const error = new LockedError("Test");
+    expect(error.status).toEqual(423);
     expect(error.message).toEqual("Test");
   });
 });

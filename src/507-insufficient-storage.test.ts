@@ -1,19 +1,16 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, test } from "vitest";
 import { InsufficientStorageError } from "./507-insufficient-storage";
 
 describe("507 Insufficient Storage", () => {
-  it("has correct status code", () => {
+  test("default behavior", () => {
     const error = new InsufficientStorageError();
     expect(error.status).toEqual(507);
+    expect(error.message).toEqual("Insufficient Storage");
   });
 
-  it("has default message", () => {
-    const error = new InsufficientStorageError();
-    expect(error.message).toEqual("Insufficient storage");
-  });
-
-  it("can customize message", () => {
+  test("customized error message", () => {
     const error = new InsufficientStorageError("Test");
+    expect(error.status).toEqual(507);
     expect(error.message).toEqual("Test");
   });
 });

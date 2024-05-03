@@ -1,19 +1,16 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, test } from "vitest";
 import { UriTooLongError } from "./414-uri-too-long";
 
-describe("414 Uri Too Long", () => {
-  it("has correct status code", () => {
+describe("414 URI Too Long", () => {
+  test("default behavior", () => {
     const error = new UriTooLongError();
     expect(error.status).toEqual(414);
+    expect(error.message).toEqual("URI Too Long");
   });
 
-  it("has default message", () => {
-    const error = new UriTooLongError();
-    expect(error.message).toEqual("URI too long");
-  });
-
-  it("can customize message", () => {
+  test("customized error message", () => {
     const error = new UriTooLongError("Test");
+    expect(error.status).toEqual(414);
     expect(error.message).toEqual("Test");
   });
 });

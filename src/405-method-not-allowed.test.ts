@@ -1,19 +1,16 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, test } from "vitest";
 import { MethodNotAllowedError } from "./405-method-not-allowed";
 
 describe("405 Method Not Allowed", () => {
-  it("has correct status code", () => {
+  test("default behavior", () => {
     const error = new MethodNotAllowedError();
     expect(error.status).toEqual(405);
+    expect(error.message).toEqual("Method Not Allowed");
   });
 
-  it("has default message", () => {
-    const error = new MethodNotAllowedError();
-    expect(error.message).toEqual("Method not allowed");
-  });
-
-  it("can customize message", () => {
+  test("customized error message", () => {
     const error = new MethodNotAllowedError("Test");
+    expect(error.status).toEqual(405);
     expect(error.message).toEqual("Test");
   });
 });

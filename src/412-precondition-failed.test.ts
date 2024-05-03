@@ -1,19 +1,16 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, test } from "vitest";
 import { PreconditionFailedError } from "./412-precondition-failed";
 
 describe("412 Precondition Failed", () => {
-  it("has correct status code", () => {
+  test("default behavior", () => {
     const error = new PreconditionFailedError();
     expect(error.status).toEqual(412);
+    expect(error.message).toEqual("Precondition Failed");
   });
 
-  it("has default message", () => {
-    const error = new PreconditionFailedError();
-    expect(error.message).toEqual("Precondition failed");
-  });
-
-  it("can customize message", () => {
+  test("customized error message", () => {
     const error = new PreconditionFailedError("Test");
+    expect(error.status).toEqual(412);
     expect(error.message).toEqual("Test");
   });
 });

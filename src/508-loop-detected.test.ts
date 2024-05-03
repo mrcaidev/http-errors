@@ -1,19 +1,16 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, test } from "vitest";
 import { LoopDetectedError } from "./508-loop-detected";
 
 describe("508 Loop Detected", () => {
-  it("has correct status code", () => {
+  test("default behavior", () => {
     const error = new LoopDetectedError();
     expect(error.status).toEqual(508);
+    expect(error.message).toEqual("Loop Detected");
   });
 
-  it("has default message", () => {
-    const error = new LoopDetectedError();
-    expect(error.message).toEqual("Loop detected");
-  });
-
-  it("can customize message", () => {
+  test("customized error message", () => {
     const error = new LoopDetectedError("Test");
+    expect(error.status).toEqual(508);
     expect(error.message).toEqual("Test");
   });
 });

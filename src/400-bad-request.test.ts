@@ -1,19 +1,16 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, test } from "vitest";
 import { BadRequestError } from "./400-bad-request";
 
 describe("400 Bad Request", () => {
-  it("has correct status code", () => {
+  test("default behavior", () => {
     const error = new BadRequestError();
     expect(error.status).toEqual(400);
+    expect(error.message).toEqual("Bad Request");
   });
 
-  it("has default message", () => {
-    const error = new BadRequestError();
-    expect(error.message).toEqual("Bad request");
-  });
-
-  it("can customize message", () => {
+  test("customized error message", () => {
     const error = new BadRequestError("Test");
+    expect(error.status).toEqual(400);
     expect(error.message).toEqual("Test");
   });
 });

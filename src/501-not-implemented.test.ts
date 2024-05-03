@@ -1,19 +1,16 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, test } from "vitest";
 import { NotImplementedError } from "./501-not-implemented";
 
 describe("501 Not Implemented", () => {
-  it("has correct status code", () => {
+  test("default behavior", () => {
     const error = new NotImplementedError();
     expect(error.status).toEqual(501);
+    expect(error.message).toEqual("Not Implemented");
   });
 
-  it("has default message", () => {
-    const error = new NotImplementedError();
-    expect(error.message).toEqual("Not implemented");
-  });
-
-  it("can customize message", () => {
+  test("customized error message", () => {
     const error = new NotImplementedError("Test");
+    expect(error.status).toEqual(501);
     expect(error.message).toEqual("Test");
   });
 });

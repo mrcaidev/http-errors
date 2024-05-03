@@ -1,19 +1,16 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, test } from "vitest";
 import { UnprocessableContentError } from "./422-unprocessable-content";
 
 describe("422 Unprocessable Content", () => {
-  it("has correct status code", () => {
+  test("default behavior", () => {
     const error = new UnprocessableContentError();
     expect(error.status).toEqual(422);
+    expect(error.message).toEqual("Unprocessable Content");
   });
 
-  it("has default message", () => {
-    const error = new UnprocessableContentError();
-    expect(error.message).toEqual("Unprocessable content");
-  });
-
-  it("can customize message", () => {
+  test("customized error message", () => {
     const error = new UnprocessableContentError("Test");
+    expect(error.status).toEqual(422);
     expect(error.message).toEqual("Test");
   });
 });

@@ -1,19 +1,16 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, test } from "vitest";
 import { HttpVersionNotSupportedError } from "./505-http-version-not-supported";
 
-describe("505 Http Version Not Supported", () => {
-  it("has correct status code", () => {
+describe("505 HTTP Version Not Supported", () => {
+  test("default behavior", () => {
     const error = new HttpVersionNotSupportedError();
     expect(error.status).toEqual(505);
+    expect(error.message).toEqual("HTTP Version Not Supported");
   });
 
-  it("has default message", () => {
-    const error = new HttpVersionNotSupportedError();
-    expect(error.message).toEqual("HTTP version not supported");
-  });
-
-  it("can customize message", () => {
+  test("customized error message", () => {
     const error = new HttpVersionNotSupportedError("Test");
+    expect(error.status).toEqual(505);
     expect(error.message).toEqual("Test");
   });
 });

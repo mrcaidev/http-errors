@@ -1,19 +1,16 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, test } from "vitest";
 import { NotExtendedError } from "./510-not-extended";
 
 describe("510 Not Extended", () => {
-  it("has correct status code", () => {
+  test("default behavior", () => {
     const error = new NotExtendedError();
     expect(error.status).toEqual(510);
+    expect(error.message).toEqual("Not Extended");
   });
 
-  it("has default message", () => {
-    const error = new NotExtendedError();
-    expect(error.message).toEqual("Not extended");
-  });
-
-  it("can customize message", () => {
+  test("customized error message", () => {
     const error = new NotExtendedError("Test");
+    expect(error.status).toEqual(510);
     expect(error.message).toEqual("Test");
   });
 });

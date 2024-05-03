@@ -1,19 +1,16 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, test } from "vitest";
 import { RangeNotSatisfiableError } from "./416-range-not-satisfiable";
 
 describe("416 Range Not Satisfiable", () => {
-  it("has correct status code", () => {
+  test("default behavior", () => {
     const error = new RangeNotSatisfiableError();
     expect(error.status).toEqual(416);
+    expect(error.message).toEqual("Range Not Satisfiable");
   });
 
-  it("has default message", () => {
-    const error = new RangeNotSatisfiableError();
-    expect(error.message).toEqual("Range not satisfiable");
-  });
-
-  it("can customize message", () => {
+  test("customized error message", () => {
     const error = new RangeNotSatisfiableError("Test");
+    expect(error.status).toEqual(416);
     expect(error.message).toEqual("Test");
   });
 });

@@ -1,19 +1,16 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, test } from "vitest";
 import { UnsupportedMediaTypeError } from "./415-unsupported-media-type";
 
 describe("415 Unsupported Media Type", () => {
-  it("has correct status code", () => {
+  test("default behavior", () => {
     const error = new UnsupportedMediaTypeError();
     expect(error.status).toEqual(415);
+    expect(error.message).toEqual("Unsupported Media Type");
   });
 
-  it("has default message", () => {
-    const error = new UnsupportedMediaTypeError();
-    expect(error.message).toEqual("Unsupported media type");
-  });
-
-  it("can customize message", () => {
+  test("customized error message", () => {
     const error = new UnsupportedMediaTypeError("Test");
+    expect(error.status).toEqual(415);
     expect(error.message).toEqual("Test");
   });
 });

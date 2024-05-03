@@ -1,19 +1,16 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, test } from "vitest";
 import { ProxyAuthenticationRequiredError } from "./407-proxy-authentication-required";
 
 describe("407 Proxy Authentication Required", () => {
-  it("has correct status code", () => {
+  test("default behavior", () => {
     const error = new ProxyAuthenticationRequiredError();
     expect(error.status).toEqual(407);
+    expect(error.message).toEqual("Proxy Authentication Required");
   });
 
-  it("has default message", () => {
-    const error = new ProxyAuthenticationRequiredError();
-    expect(error.message).toEqual("Proxy authentication required");
-  });
-
-  it("can customize message", () => {
+  test("customized error message", () => {
     const error = new ProxyAuthenticationRequiredError("Test");
+    expect(error.status).toEqual(407);
     expect(error.message).toEqual("Test");
   });
 });

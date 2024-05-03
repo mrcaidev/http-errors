@@ -1,19 +1,16 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, test } from "vitest";
 import { LengthRequiredError } from "./411-length-required";
 
 describe("411 Length Required", () => {
-  it("has correct status code", () => {
+  test("default behavior", () => {
     const error = new LengthRequiredError();
     expect(error.status).toEqual(411);
+    expect(error.message).toEqual("Length Required");
   });
 
-  it("has default message", () => {
-    const error = new LengthRequiredError();
-    expect(error.message).toEqual("Length required");
-  });
-
-  it("can customize message", () => {
+  test("customized error message", () => {
     const error = new LengthRequiredError("Test");
+    expect(error.status).toEqual(411);
     expect(error.message).toEqual("Test");
   });
 });

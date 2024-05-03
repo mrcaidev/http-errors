@@ -1,19 +1,16 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, test } from "vitest";
 import { PaymentRequiredError } from "./402-payment-required";
 
 describe("402 Payment Required", () => {
-  it("has correct status code", () => {
+  test("default behavior", () => {
     const error = new PaymentRequiredError();
     expect(error.status).toEqual(402);
+    expect(error.message).toEqual("Payment Required");
   });
 
-  it("has default message", () => {
-    const error = new PaymentRequiredError();
-    expect(error.message).toEqual("Payment required");
-  });
-
-  it("can customize message", () => {
+  test("customized error message", () => {
     const error = new PaymentRequiredError("Test");
+    expect(error.status).toEqual(402);
     expect(error.message).toEqual("Test");
   });
 });

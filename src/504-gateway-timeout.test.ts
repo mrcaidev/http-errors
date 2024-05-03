@@ -1,19 +1,16 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, test } from "vitest";
 import { GatewayTimeoutError } from "./504-gateway-timeout";
 
 describe("504 Gateway Timeout", () => {
-  it("has correct status code", () => {
+  test("default behavior", () => {
     const error = new GatewayTimeoutError();
     expect(error.status).toEqual(504);
+    expect(error.message).toEqual("Gateway Timeout");
   });
 
-  it("has default message", () => {
-    const error = new GatewayTimeoutError();
-    expect(error.message).toEqual("Gateway timeout");
-  });
-
-  it("can customize message", () => {
+  test("customized error message", () => {
     const error = new GatewayTimeoutError("Test");
+    expect(error.status).toEqual(504);
     expect(error.message).toEqual("Test");
   });
 });
