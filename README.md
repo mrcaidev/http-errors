@@ -45,7 +45,7 @@ new HttpError(400, "Malformed data") instance of Error; // true
 
 Hover the mouse over the error class to view its definition and RFC link.
 
-![Hover information](assets/hover-info.jpg)
+![Hover tooltip](assets/hover.png)
 
 ## 🔎 References
 
