@@ -26,7 +26,15 @@ import { BadRequestError } from "@mrcaidev/http-errors";
 throw new BadRequestError("Malformed data");
 ```
 
-Dynamic status code and error message:
+Dynamic status code:
+
+```ts
+import { HttpError } from "@mrcaidev/http-errors";
+
+throw new HttpError(400);
+```
+
+Dynamic status code and customized error message:
 
 ```ts
 import { HttpError } from "@mrcaidev/http-errors";
@@ -40,7 +48,7 @@ All error classes extend `HttpError`, which further extends `Error`.
 import { BadRequestError, HttpError } from "@mrcaidev/http-errors";
 
 new BadRequestError() instanceof HttpError; // true
-new HttpError(400, "Malformed data") instanceof Error; // true
+new HttpError(400) instanceof Error; // true
 ```
 
 Hover the mouse over the error class to view its definition and RFC link.
