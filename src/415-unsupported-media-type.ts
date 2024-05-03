@@ -25,7 +25,7 @@ import { HttpError } from "./http-error";
  * @see https://www.rfc-editor.org/rfc/rfc9110#status.415
  */
 export class UnsupportedMediaTypeError extends HttpError {
-  constructor(message = "Unsupported media type") {
+  constructor(message?: string) {
     super(415, message);
   }
 }

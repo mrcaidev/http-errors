@@ -8,7 +8,7 @@ import { HttpError } from "./http-error";
  * @see https://www.rfc-editor.org/rfc/rfc9110#status.500
  */
 export class InternalServerError extends HttpError {
-  constructor(message = "Internal server error") {
+  constructor(message?: string) {
     super(500, message);
   }
 }

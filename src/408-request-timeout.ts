@@ -13,7 +13,7 @@ import { HttpError } from "./http-error";
  * @see https://www.rfc-editor.org/rfc/rfc9110#status.408
  */
 export class RequestTimeoutError extends HttpError {
-  constructor(message = "Request timeout") {
+  constructor(message?: string) {
     super(408, message);
   }
 }

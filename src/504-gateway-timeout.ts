@@ -9,7 +9,7 @@ import { HttpError } from "./http-error";
  * @see https://www.rfc-editor.org/rfc/rfc9110#status.504
  */
 export class GatewayTimeoutError extends HttpError {
-  constructor(message = "Gateway timeout") {
+  constructor(message?: string) {
     super(504, message);
   }
 }

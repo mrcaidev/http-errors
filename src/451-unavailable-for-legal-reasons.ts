@@ -31,7 +31,7 @@ import { HttpError } from "./http-error";
  * @see https://www.rfc-editor.org/rfc/rfc7725#section-3
  */
 export class UnavailableForLegalReasonsError extends HttpError {
-  constructor(message = "Unavailable for legal reasons") {
+  constructor(message?: string) {
     super(451, message);
   }
 }

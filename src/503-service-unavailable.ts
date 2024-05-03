@@ -19,7 +19,7 @@ import { HttpError } from "./http-error";
  * @see https://www.rfc-editor.org/rfc/rfc9110#status.503
  */
 export class ServiceUnavailableError extends HttpError {
-  constructor(message = "Service unavailable") {
+  constructor(message?: string) {
     super(503, message);
   }
 }

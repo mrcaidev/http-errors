@@ -10,7 +10,7 @@ import { HttpError } from "./http-error";
  * @see https://www.rfc-editor.org/rfc/rfc9110#status.400
  */
 export class BadRequestError extends HttpError {
-  constructor(message = "Bad request") {
+  constructor(message?: string) {
     super(400, message);
   }
 }

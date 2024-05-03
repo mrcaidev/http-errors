@@ -24,7 +24,7 @@ import { HttpError } from "./http-error";
  * @see https://www.rfc-editor.org/rfc/rfc9110#status.426
  */
 export class UpgradeRequiredError extends HttpError {
-  constructor(message = "Upgrade required") {
+  constructor(message?: string) {
     super(426, message);
   }
 }

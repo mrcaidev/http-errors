@@ -32,7 +32,7 @@ import { HttpError } from "./http-error";
  * @see https://www.rfc-editor.org/rfc/rfc8470#section-5.2
  */
 export class TooEarlyError extends HttpError {
-  constructor(message = "Too early") {
+  constructor(message?: string) {
     super(425, message);
   }
 }

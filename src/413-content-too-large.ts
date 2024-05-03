@@ -17,7 +17,7 @@ import { HttpError } from "./http-error";
  * @see https://www.rfc-editor.org/rfc/rfc9110#status.413
  */
 export class ContentTooLargeError extends HttpError {
-  constructor(message = "Content too large") {
+  constructor(message?: string) {
     super(413, message);
   }
 }

@@ -13,7 +13,7 @@ import { HttpError } from "./http-error";
  * @see https://www.rfc-editor.org/rfc/rfc4918#section-11.5
  */
 export class InsufficientStorageError extends HttpError {
-  constructor(message = "Insufficient storage") {
+  constructor(message?: string) {
     super(507, message);
   }
 }

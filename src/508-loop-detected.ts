@@ -10,7 +10,7 @@ import { HttpError } from "./http-error";
  * @see https://www.rfc-editor.org/rfc/rfc5842#section-7.2
  */
 export class LoopDetectedError extends HttpError {
-  constructor(message = "Loop detected") {
+  constructor(message?: string) {
     super(508, message);
   }
 }

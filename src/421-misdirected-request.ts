@@ -23,7 +23,7 @@ import { HttpError } from "./http-error";
  * @see https://www.rfc-editor.org/rfc/rfc9110#status.421
  */
 export class MisdirectedRequestError extends HttpError {
-  constructor(message = "Misdirected request") {
+  constructor(message?: string) {
     super(421, message);
   }
 }

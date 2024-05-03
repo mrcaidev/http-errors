@@ -17,7 +17,7 @@ import { HttpError } from "./http-error";
  * @see https://www.rfc-editor.org/rfc/rfc9110#status.405
  */
 export class MethodNotAllowedError extends HttpError {
-  constructor(message = "Method not allowed") {
+  constructor(message?: string) {
     super(405, message);
   }
 }

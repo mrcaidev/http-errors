@@ -21,7 +21,7 @@ import { HttpError } from "./http-error";
  * @see https://www.rfc-editor.org/rfc/rfc9110#status.403
  */
 export class ForbiddenError extends HttpError {
-  constructor(message = "Forbidden") {
+  constructor(message?: string) {
     super(403, message);
   }
 }

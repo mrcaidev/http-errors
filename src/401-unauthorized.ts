@@ -23,7 +23,7 @@ import { HttpError } from "./http-error";
  * @see https://www.rfc-editor.org/rfc/rfc9110#status.401
  */
 export class UnauthorizedError extends HttpError {
-  constructor(message = "Unauthorized") {
+  constructor(message?: string) {
     super(401, message);
   }
 }

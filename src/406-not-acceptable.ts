@@ -21,7 +21,7 @@ import { HttpError } from "./http-error";
  * @see https://www.rfc-editor.org/rfc/rfc9110#status.406
  */
 export class NotAcceptableError extends HttpError {
-  constructor(message = "Not acceptable") {
+  constructor(message?: string) {
     super(406, message);
   }
 }

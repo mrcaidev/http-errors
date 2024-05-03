@@ -19,7 +19,7 @@ import { HttpError } from "./http-error";
  * @see https://www.rfc-editor.org/rfc/rfc9110#status.404
  */
 export class NotFoundError extends HttpError {
-  constructor(message = "Not found") {
+  constructor(message?: string) {
     super(404, message);
   }
 }

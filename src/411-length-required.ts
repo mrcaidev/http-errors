@@ -11,7 +11,7 @@ import { HttpError } from "./http-error";
  * @see https://www.rfc-editor.org/rfc/rfc9110#status.411
  */
 export class LengthRequiredError extends HttpError {
-  constructor(message = "Length required") {
+  constructor(message?: string) {
     super(411, message);
   }
 }

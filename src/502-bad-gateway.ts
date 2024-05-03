@@ -8,7 +8,7 @@ import { HttpError } from "./http-error";
  * @see https://www.rfc-editor.org/rfc/rfc9110#status.502
  */
 export class BadGatewayError extends HttpError {
-  constructor(message = "Bad gateway") {
+  constructor(message?: string) {
     super(502, message);
   }
 }

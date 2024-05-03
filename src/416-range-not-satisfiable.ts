@@ -45,7 +45,7 @@ import { HttpError } from "./http-error";
  * @see https://www.rfc-editor.org/rfc/rfc9110#status.416
  */
 export class RangeNotSatisfiableError extends HttpError {
-  constructor(message = "Range not satisfiable") {
+  constructor(message?: string) {
     super(416, message);
   }
 }

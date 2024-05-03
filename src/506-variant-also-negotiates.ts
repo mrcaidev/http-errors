@@ -11,7 +11,7 @@ import { HttpError } from "./http-error";
  * @see https://www.rfc-editor.org/rfc/rfc2295#section-8.1
  */
 export class VariantAlsoNegotiatesError extends HttpError {
-  constructor(message = "Variant also negotiates") {
+  constructor(message?: string) {
     super(506, message);
   }
 }

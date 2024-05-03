@@ -6,7 +6,7 @@ import { HttpError } from "./http-error";
  * @see https://www.rfc-editor.org/rfc/rfc9110#status.402
  */
 export class PaymentRequiredError extends HttpError {
-  constructor(message = "Payment required") {
+  constructor(message?: string) {
     super(402, message);
   }
 }

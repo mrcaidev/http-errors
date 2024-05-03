@@ -10,7 +10,7 @@ import { HttpError } from "./http-error";
  * @see https://www.rfc-editor.org/rfc/rfc4918#section-11.3
  */
 export class LockedError extends HttpError {
-  constructor(message = "Locked") {
+  constructor(message?: string) {
     super(423, message);
   }
 }

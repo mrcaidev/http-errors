@@ -13,7 +13,7 @@ import { HttpError } from "./http-error";
  * @see https://www.rfc-editor.org/rfc/rfc9110#status.412
  */
 export class PreconditionFailedError extends HttpError {
-  constructor(message = "Precondition failed") {
+  constructor(message?: string) {
     super(412, message);
   }
 }

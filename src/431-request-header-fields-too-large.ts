@@ -15,7 +15,7 @@ import { HttpError } from "./http-error";
  * @see https://www.rfc-editor.org/rfc/rfc6585#section-5
  */
 export class RequestHeaderFieldsTooLargeError extends HttpError {
-  constructor(message = "Request header fields too large") {
+  constructor(message?: string) {
     super(431, message);
   }
 }

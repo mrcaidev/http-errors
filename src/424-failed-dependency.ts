@@ -11,7 +11,7 @@ import { HttpError } from "./http-error";
  * @see https://www.rfc-editor.org/rfc/rfc4918#section-11.4
  */
 export class FailedDependencyError extends HttpError {
-  constructor(message = "Failed dependency") {
+  constructor(message?: string) {
     super(424, message);
   }
 }

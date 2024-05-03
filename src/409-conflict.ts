@@ -21,7 +21,7 @@ import { HttpError } from "./http-error";
  * @see https://www.rfc-editor.org/rfc/rfc9110#status.409
  */
 export class ConflictError extends HttpError {
-  constructor(message = "Conflict") {
+  constructor(message?: string) {
     super(409, message);
   }
 }

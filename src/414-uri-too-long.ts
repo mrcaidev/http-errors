@@ -19,7 +19,7 @@ import { HttpError } from "./http-error";
  * @see https://www.rfc-editor.org/rfc/rfc9110#status.414
  */
 export class UriTooLongError extends HttpError {
-  constructor(message = "URI too long") {
+  constructor(message?: string) {
     super(414, message);
   }
 }

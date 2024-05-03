@@ -14,7 +14,7 @@ import { HttpError } from "./http-error";
  * @see https://www.rfc-editor.org/rfc/rfc9110#status.501
  */
 export class NotImplementedError extends HttpError {
-  constructor(message = "Not implemented") {
+  constructor(message?: string) {
     super(501, message);
   }
 }

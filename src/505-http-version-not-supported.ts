@@ -16,7 +16,7 @@ import { HttpError } from "./http-error";
  * @see https://www.rfc-editor.org/rfc/rfc9110#status.505
  */
 export class HttpVersionNotSupportedError extends HttpError {
-  constructor(message = "HTTP version not supported") {
+  constructor(message?: string) {
     super(505, message);
   }
 }

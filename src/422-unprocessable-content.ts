@@ -14,7 +14,7 @@ import { HttpError } from "./http-error";
  * @see https://www.rfc-editor.org/rfc/rfc9110#status.422
  */
 export class UnprocessableContentError extends HttpError {
-  constructor(message = "Unprocessable content") {
+  constructor(message?: string) {
     super(422, message);
   }
 }

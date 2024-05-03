@@ -15,7 +15,7 @@ import { HttpError } from "./http-error";
  * @see https://www.rfc-editor.org/rfc/rfc9110#status.407
  */
 export class ProxyAuthenticationRequiredError extends HttpError {
-  constructor(message = "Proxy authentication required") {
+  constructor(message?: string) {
     super(407, message);
   }
 }

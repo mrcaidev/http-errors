@@ -28,7 +28,7 @@ import { HttpError } from "./http-error";
  * @see https://www.rfc-editor.org/rfc/rfc9110#status.410
  */
 export class GoneError extends HttpError {
-  constructor(message = "Gone") {
+  constructor(message?: string) {
     super(410, message);
   }
 }

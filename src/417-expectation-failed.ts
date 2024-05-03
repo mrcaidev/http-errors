@@ -10,7 +10,7 @@ import { HttpError } from "./http-error";
  * @see https://www.rfc-editor.org/rfc/rfc9110#status.417
  */
 export class ExpectationFailedError extends HttpError {
-  constructor(message = "Expectation failed") {
+  constructor(message?: string) {
     super(417, message);
   }
 }

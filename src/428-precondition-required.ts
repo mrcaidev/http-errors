@@ -19,7 +19,7 @@ import { HttpError } from "./http-error";
  * @see https://www.rfc-editor.org/rfc/rfc6585#section-3
  */
 export class PreconditionRequiredError extends HttpError {
-  constructor(message = "Precondition required") {
+  constructor(message?: string) {
     super(428, message);
   }
 }
