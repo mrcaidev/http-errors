@@ -34,6 +34,15 @@ import { HttpError } from "@mrcaidev/http-errors";
 throw new HttpError(400, "Malformed data");
 ```
 
+All error classes extend `HttpError`, which further extends `Error`.
+
+```ts
+import { BadRequestError, HttpError } from "@mrcaidev/http-errors";
+
+new BadRequestError() instanceof HttpError; // true
+new HttpError(400, "Malformed data") instance of Error; // true
+```
+
 Hover the mouse over the error class to view its definition and RFC link.
 
 ![Hover information](assets/hover-info.jpg)
