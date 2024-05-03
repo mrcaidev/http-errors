@@ -17,6 +17,8 @@ import { HttpError } from "./http-error";
  * to the user, since that entity may include relevant diagnostic information.
  *
  * @see https://www.rfc-editor.org/rfc/rfc2774#section-7
+ *
+ * @deprecated https://datatracker.ietf.org/doc/status-change-http-experiments-to-historic/
  */
 export class NotExtendedError extends HttpError {
   constructor(message?: string) {
