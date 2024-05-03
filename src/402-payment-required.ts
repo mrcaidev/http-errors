@@ -1,9 +1,9 @@
 import { HttpError } from "./http-error";
 
 /**
- * Reserved for future use.
+ * The 402 (Payment Required) status code is reserved for future use.
  *
- * @see https://www.rfc-editor.org/rfc/rfc9110#section-15.5.3
+ * @see https://www.rfc-editor.org/rfc/rfc9110#status.402
  */
 export class PaymentRequiredError extends HttpError {
   constructor(message = "Payment required") {
