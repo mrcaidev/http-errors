@@ -15,7 +15,7 @@ Default:
 ```ts
 import { BadRequestError } from "@mrcaidev/http-errors";
 
-throw new BadRequestError();
+throw new BadRequestError(); // status: 400, message: "Bad Request"
 ```
 
 Customized error message:
@@ -23,7 +23,7 @@ Customized error message:
 ```ts
 import { BadRequestError } from "@mrcaidev/http-errors";
 
-throw new BadRequestError("Malformed data");
+throw new BadRequestError("Malformed data"); // status: 400, message: "Malformed data"
 ```
 
 Dynamic status code:
@@ -31,7 +31,7 @@ Dynamic status code:
 ```ts
 import { HttpError } from "@mrcaidev/http-errors";
 
-throw new HttpError(400);
+throw new HttpError(400); // status: 400, message: "Bad Request"
 ```
 
 Dynamic status code and customized error message:
@@ -39,7 +39,7 @@ Dynamic status code and customized error message:
 ```ts
 import { HttpError } from "@mrcaidev/http-errors";
 
-throw new HttpError(400, "Malformed data");
+throw new HttpError(400, "Malformed data"); // status: 400, message: "Malformed data"
 ```
 
 All error classes extend `HttpError`, which further extends `Error`.
