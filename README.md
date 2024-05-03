@@ -40,7 +40,7 @@ All error classes extend `HttpError`, which further extends `Error`.
 import { BadRequestError, HttpError } from "@mrcaidev/http-errors";
 
 new BadRequestError() instanceof HttpError; // true
-new HttpError(400, "Malformed data") instance of Error; // true
+new HttpError(400, "Malformed data") instanceof Error; // true
 ```
 
 Hover the mouse over the error class to view its definition and RFC link.
