@@ -53,7 +53,7 @@ new HttpError(400) instanceof Error; // true
 
 Hover the mouse over the error class to view its definition and RFC link.
 
-![Hover tooltip](assets/hover.png)
+![Hover tooltip](intellisense.png)
 
 ## 🔎 References
 
