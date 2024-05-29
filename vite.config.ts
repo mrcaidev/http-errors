@@ -6,8 +6,14 @@ export default defineConfig({
   build: {
     lib: {
       entry: "src/index.ts",
-      name: "@mrcaidev/http-errors",
+      name: "mrcaidevHttpErrors",
       fileName: "index",
+    },
+  },
+  test: {
+    isolate: false,
+    sequence: {
+      concurrent: true,
     },
   },
 });
