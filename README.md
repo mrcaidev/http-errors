@@ -5,12 +5,14 @@ Utility classes for HTTP errors.
 ## 📦 Installation
 
 ```sh
-npm i @mrcaidev/http-errors
+npm add @mrcaidev/http-errors # using npm
+yarn add @mrcaidev/http-errors # using yarn
+pnpm add @mrcaidev/http-errors # using pnpm
 ```
 
-## 🛠️ Usage
+## 🚀 Usage
 
-Default:
+Simplest:
 
 ```ts
 import { BadRequestError } from "@mrcaidev/http-errors";
@@ -18,7 +20,7 @@ import { BadRequestError } from "@mrcaidev/http-errors";
 throw new BadRequestError(); // status: 400, message: "Bad Request"
 ```
 
-Customized error message:
+Custom error message:
 
 ```ts
 import { BadRequestError } from "@mrcaidev/http-errors";
@@ -34,7 +36,7 @@ import { HttpError } from "@mrcaidev/http-errors";
 throw new HttpError(400); // status: 400, message: "Bad Request"
 ```
 
-Dynamic status code and customized error message:
+Dynamic status code and custom error message:
 
 ```ts
 import { HttpError } from "@mrcaidev/http-errors";
@@ -42,7 +44,7 @@ import { HttpError } from "@mrcaidev/http-errors";
 throw new HttpError(400, "Malformed data"); // status: 400, message: "Malformed data"
 ```
 
-All error classes extend `HttpError`, which further extends `Error`.
+Every error class extends `HttpError`, which further extends `Error`.
 
 ```ts
 import { BadRequestError, HttpError } from "@mrcaidev/http-errors";
@@ -51,9 +53,9 @@ new BadRequestError() instanceof HttpError; // true
 new HttpError(400) instanceof Error; // true
 ```
 
-Hover the mouse over the error class to view its definition and RFC link.
+Hover over an error class in the editor to see its definition in RFC.
 
-![Hover tooltip](intellisense.png)
+![Editor tooltip](editor.png)
 
 ## 🔎 References
 
