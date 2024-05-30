@@ -1,5 +1,8 @@
 import { defaultMessages } from "./default-messages";
 
+/**
+ * Parent class of all HTTP errors.
+ */
 export class HttpError extends Error {
   constructor(
     // eslint-disable-next-line @typescript-eslint/ban-types
