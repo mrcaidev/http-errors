@@ -44,6 +44,22 @@ import { HttpError } from "@mrcaidev/http-errors";
 throw new HttpError(400, "Malformed data"); // status: 400, message: "Malformed data"
 ```
 
+Dynamic non-standard status code:
+
+```ts
+import { HttpError } from "@mrcaidev/http-errors";
+
+throw new HttpError(499); // status: 499, message: "Unknown"
+```
+
+Dynamic non-standard status code and custom error message:
+
+```ts
+import { HttpError } from "@mrcaidev/http-errors";
+
+throw new HttpError(499, "Custom error"); // status: 400, message: "Custom error"
+```
+
 Every error class extends `HttpError`, which further extends `Error`.
 
 ```ts
