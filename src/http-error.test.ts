@@ -13,4 +13,16 @@ describe("HTTP error", () => {
     expect(error.status).toEqual(400);
     expect(error.message).toEqual("Test");
   });
+
+  test("non-standard status code", () => {
+    const error = new HttpError(499);
+    expect(error.status).toEqual(499);
+    expect(error.message).toEqual("Unknown");
+  });
+
+  test("non-standard status code and custom error message", () => {
+    const error = new HttpError(499, "Test");
+    expect(error.status).toEqual(499);
+    expect(error.message).toEqual("Test");
+  });
 });
