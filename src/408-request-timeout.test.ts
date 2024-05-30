@@ -8,7 +8,7 @@ describe("408 Request Timeout", () => {
     expect(error.message).toEqual("Request Timeout");
   });
 
-  test("customized error message", () => {
+  test("custom error message", () => {
     const error = new RequestTimeoutError("Test");
     expect(error.status).toEqual(408);
     expect(error.message).toEqual("Test");

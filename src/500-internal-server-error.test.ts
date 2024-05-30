@@ -8,7 +8,7 @@ describe("500 Internal Server Error", () => {
     expect(error.message).toEqual("Internal Server Error");
   });
 
-  test("customized error message", () => {
+  test("custom error message", () => {
     const error = new InternalServerError("Test");
     expect(error.status).toEqual(500);
     expect(error.message).toEqual("Test");

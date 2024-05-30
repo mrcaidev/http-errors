@@ -8,7 +8,7 @@ describe("416 Range Not Satisfiable", () => {
     expect(error.message).toEqual("Range Not Satisfiable");
   });
 
-  test("customized error message", () => {
+  test("custom error message", () => {
     const error = new RangeNotSatisfiableError("Test");
     expect(error.status).toEqual(416);
     expect(error.message).toEqual("Test");

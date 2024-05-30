@@ -8,7 +8,7 @@ describe("501 Not Implemented", () => {
     expect(error.message).toEqual("Not Implemented");
   });
 
-  test("customized error message", () => {
+  test("custom error message", () => {
     const error = new NotImplementedError("Test");
     expect(error.status).toEqual(501);
     expect(error.message).toEqual("Test");

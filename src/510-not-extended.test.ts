@@ -8,7 +8,7 @@ describe("510 Not Extended", () => {
     expect(error.message).toEqual("Not Extended");
   });
 
-  test("customized error message", () => {
+  test("custom error message", () => {
     const error = new NotExtendedError("Test");
     expect(error.status).toEqual(510);
     expect(error.message).toEqual("Test");

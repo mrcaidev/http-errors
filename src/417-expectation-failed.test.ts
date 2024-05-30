@@ -8,7 +8,7 @@ describe("417 Expectation Failed", () => {
     expect(error.message).toEqual("Expectation Failed");
   });
 
-  test("customized error message", () => {
+  test("custom error message", () => {
     const error = new ExpectationFailedError("Test");
     expect(error.status).toEqual(417);
     expect(error.message).toEqual("Test");

@@ -8,7 +8,7 @@ describe("503 Service Unavailable", () => {
     expect(error.message).toEqual("Service Unavailable");
   });
 
-  test("customized error message", () => {
+  test("custom error message", () => {
     const error = new ServiceUnavailableError("Test");
     expect(error.status).toEqual(503);
     expect(error.message).toEqual("Test");

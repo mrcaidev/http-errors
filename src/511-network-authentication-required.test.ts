@@ -8,7 +8,7 @@ describe("511 Network Authentication Required", () => {
     expect(error.message).toEqual("Network Authentication Required");
   });
 
-  test("customized error message", () => {
+  test("custom error message", () => {
     const error = new NetworkAuthenticationRequiredError("Test");
     expect(error.status).toEqual(511);
     expect(error.message).toEqual("Test");

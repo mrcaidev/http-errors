@@ -8,7 +8,7 @@ describe("506 Variant Also Negotiates", () => {
     expect(error.message).toEqual("Variant Also Negotiates");
   });
 
-  test("customized error message", () => {
+  test("custom error message", () => {
     const error = new VariantAlsoNegotiatesError("Test");
     expect(error.status).toEqual(506);
     expect(error.message).toEqual("Test");

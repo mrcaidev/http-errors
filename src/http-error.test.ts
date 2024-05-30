@@ -8,7 +8,7 @@ describe("HTTP error", () => {
     expect(error.message).toEqual("Bad Request");
   });
 
-  test("customized error message", () => {
+  test("custom error message", () => {
     const error = new HttpError(400, "Test");
     expect(error.status).toEqual(400);
     expect(error.message).toEqual("Test");

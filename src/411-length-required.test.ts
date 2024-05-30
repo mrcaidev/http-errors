@@ -8,7 +8,7 @@ describe("411 Length Required", () => {
     expect(error.message).toEqual("Length Required");
   });
 
-  test("customized error message", () => {
+  test("custom error message", () => {
     const error = new LengthRequiredError("Test");
     expect(error.status).toEqual(411);
     expect(error.message).toEqual("Test");

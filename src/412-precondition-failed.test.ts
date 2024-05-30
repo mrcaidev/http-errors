@@ -8,7 +8,7 @@ describe("412 Precondition Failed", () => {
     expect(error.message).toEqual("Precondition Failed");
   });
 
-  test("customized error message", () => {
+  test("custom error message", () => {
     const error = new PreconditionFailedError("Test");
     expect(error.status).toEqual(412);
     expect(error.message).toEqual("Test");

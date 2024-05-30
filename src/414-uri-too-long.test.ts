@@ -8,7 +8,7 @@ describe("414 URI Too Long", () => {
     expect(error.message).toEqual("URI Too Long");
   });
 
-  test("customized error message", () => {
+  test("custom error message", () => {
     const error = new UriTooLongError("Test");
     expect(error.status).toEqual(414);
     expect(error.message).toEqual("Test");

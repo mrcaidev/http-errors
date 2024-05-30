@@ -8,7 +8,7 @@ describe("401 Unauthorized", () => {
     expect(error.message).toEqual("Unauthorized");
   });
 
-  test("customized error message", () => {
+  test("custom error message", () => {
     const error = new UnauthorizedError("Test");
     expect(error.status).toEqual(401);
     expect(error.message).toEqual("Test");

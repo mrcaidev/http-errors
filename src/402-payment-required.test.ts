@@ -8,7 +8,7 @@ describe("402 Payment Required", () => {
     expect(error.message).toEqual("Payment Required");
   });
 
-  test("customized error message", () => {
+  test("custom error message", () => {
     const error = new PaymentRequiredError("Test");
     expect(error.status).toEqual(402);
     expect(error.message).toEqual("Test");

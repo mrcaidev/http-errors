@@ -8,7 +8,7 @@ describe("429 Too Many Requests", () => {
     expect(error.message).toEqual("Too Many Requests");
   });
 
-  test("customized error message", () => {
+  test("custom error message", () => {
     const error = new TooManyRequestsError("Test");
     expect(error.status).toEqual(429);
     expect(error.message).toEqual("Test");

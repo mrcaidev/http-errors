@@ -8,7 +8,7 @@ describe("406 Not Acceptable", () => {
     expect(error.message).toEqual("Not Acceptable");
   });
 
-  test("customized error message", () => {
+  test("custom error message", () => {
     const error = new NotAcceptableError("Test");
     expect(error.status).toEqual(406);
     expect(error.message).toEqual("Test");

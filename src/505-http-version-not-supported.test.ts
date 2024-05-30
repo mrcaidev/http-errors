@@ -8,7 +8,7 @@ describe("505 HTTP Version Not Supported", () => {
     expect(error.message).toEqual("HTTP Version Not Supported");
   });
 
-  test("customized error message", () => {
+  test("custom error message", () => {
     const error = new HttpVersionNotSupportedError("Test");
     expect(error.status).toEqual(505);
     expect(error.message).toEqual("Test");

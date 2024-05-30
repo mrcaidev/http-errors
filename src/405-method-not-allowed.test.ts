@@ -8,7 +8,7 @@ describe("405 Method Not Allowed", () => {
     expect(error.message).toEqual("Method Not Allowed");
   });
 
-  test("customized error message", () => {
+  test("custom error message", () => {
     const error = new MethodNotAllowedError("Test");
     expect(error.status).toEqual(405);
     expect(error.message).toEqual("Test");

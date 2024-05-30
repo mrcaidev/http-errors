@@ -8,7 +8,7 @@ describe("504 Gateway Timeout", () => {
     expect(error.message).toEqual("Gateway Timeout");
   });
 
-  test("customized error message", () => {
+  test("custom error message", () => {
     const error = new GatewayTimeoutError("Test");
     expect(error.status).toEqual(504);
     expect(error.message).toEqual("Test");

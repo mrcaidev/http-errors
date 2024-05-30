@@ -8,7 +8,7 @@ describe("415 Unsupported Media Type", () => {
     expect(error.message).toEqual("Unsupported Media Type");
   });
 
-  test("customized error message", () => {
+  test("custom error message", () => {
     const error = new UnsupportedMediaTypeError("Test");
     expect(error.status).toEqual(415);
     expect(error.message).toEqual("Test");

@@ -8,7 +8,7 @@ describe("407 Proxy Authentication Required", () => {
     expect(error.message).toEqual("Proxy Authentication Required");
   });
 
-  test("customized error message", () => {
+  test("custom error message", () => {
     const error = new ProxyAuthenticationRequiredError("Test");
     expect(error.status).toEqual(407);
     expect(error.message).toEqual("Test");

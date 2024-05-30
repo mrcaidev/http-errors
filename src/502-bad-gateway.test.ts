@@ -8,7 +8,7 @@ describe("502 Bad Gateway", () => {
     expect(error.message).toEqual("Bad Gateway");
   });
 
-  test("customized error message", () => {
+  test("custom error message", () => {
     const error = new BadGatewayError("Test");
     expect(error.status).toEqual(502);
     expect(error.message).toEqual("Test");

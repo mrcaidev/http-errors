@@ -8,7 +8,7 @@ describe("410 Gone", () => {
     expect(error.message).toEqual("Gone");
   });
 
-  test("customized error message", () => {
+  test("custom error message", () => {
     const error = new GoneError("Test");
     expect(error.status).toEqual(410);
     expect(error.message).toEqual("Test");

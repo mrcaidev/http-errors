@@ -8,7 +8,7 @@ describe("413 Content Too Large", () => {
     expect(error.message).toEqual("Content Too Large");
   });
 
-  test("customized error message", () => {
+  test("custom error message", () => {
     const error = new ContentTooLargeError("Test");
     expect(error.status).toEqual(413);
     expect(error.message).toEqual("Test");

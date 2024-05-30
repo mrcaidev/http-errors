@@ -8,7 +8,7 @@ describe("426 Upgrade Required", () => {
     expect(error.message).toEqual("Upgrade Required");
   });
 
-  test("customized error message", () => {
+  test("custom error message", () => {
     const error = new UpgradeRequiredError("Test");
     expect(error.status).toEqual(426);
     expect(error.message).toEqual("Test");

@@ -8,7 +8,7 @@ describe("403 Forbidden", () => {
     expect(error.message).toEqual("Forbidden");
   });
 
-  test("customized error message", () => {
+  test("custom error message", () => {
     const error = new ForbiddenError("Test");
     expect(error.status).toEqual(403);
     expect(error.message).toEqual("Test");

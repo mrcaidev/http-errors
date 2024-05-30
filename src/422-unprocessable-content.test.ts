@@ -8,7 +8,7 @@ describe("422 Unprocessable Content", () => {
     expect(error.message).toEqual("Unprocessable Content");
   });
 
-  test("customized error message", () => {
+  test("custom error message", () => {
     const error = new UnprocessableContentError("Test");
     expect(error.status).toEqual(422);
     expect(error.message).toEqual("Test");

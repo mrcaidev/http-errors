@@ -8,7 +8,7 @@ describe("451 Unavailable For Legal Reasons", () => {
     expect(error.message).toEqual("Unavailable For Legal Reasons");
   });
 
-  test("customized error message", () => {
+  test("custom error message", () => {
     const error = new UnavailableForLegalReasonsError("Test");
     expect(error.status).toEqual(451);
     expect(error.message).toEqual("Test");

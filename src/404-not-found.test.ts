@@ -8,7 +8,7 @@ describe("404 Not Found", () => {
     expect(error.message).toEqual("Not Found");
   });
 
-  test("customized error message", () => {
+  test("custom error message", () => {
     const error = new NotFoundError("Test");
     expect(error.status).toEqual(404);
     expect(error.message).toEqual("Test");

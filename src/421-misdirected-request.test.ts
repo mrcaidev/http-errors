@@ -8,7 +8,7 @@ describe("421 Misdirected Request", () => {
     expect(error.message).toEqual("Misdirected Request");
   });
 
-  test("customized error message", () => {
+  test("custom error message", () => {
     const error = new MisdirectedRequestError("Test");
     expect(error.status).toEqual(421);
     expect(error.message).toEqual("Test");

@@ -8,7 +8,7 @@ describe("508 Loop Detected", () => {
     expect(error.message).toEqual("Loop Detected");
   });
 
-  test("customized error message", () => {
+  test("custom error message", () => {
     const error = new LoopDetectedError("Test");
     expect(error.status).toEqual(508);
     expect(error.message).toEqual("Test");

@@ -8,7 +8,7 @@ describe("431 Request Header Fields Too Large", () => {
     expect(error.message).toEqual("Request Header Fields Too Large");
   });
 
-  test("customized error message", () => {
+  test("custom error message", () => {
     const error = new RequestHeaderFieldsTooLargeError("Test");
     expect(error.status).toEqual(431);
     expect(error.message).toEqual("Test");

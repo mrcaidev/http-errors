@@ -8,7 +8,7 @@ describe("428 Precondition Required", () => {
     expect(error.message).toEqual("Precondition Required");
   });
 
-  test("customized error message", () => {
+  test("custom error message", () => {
     const error = new PreconditionRequiredError("Test");
     expect(error.status).toEqual(428);
     expect(error.message).toEqual("Test");

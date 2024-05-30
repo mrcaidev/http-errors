@@ -8,7 +8,7 @@ describe("425 Too Early", () => {
     expect(error.message).toEqual("Too Early");
   });
 
-  test("customized error message", () => {
+  test("custom error message", () => {
     const error = new TooEarlyError("Test");
     expect(error.status).toEqual(425);
     expect(error.message).toEqual("Test");

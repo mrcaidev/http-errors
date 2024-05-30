@@ -8,7 +8,7 @@ describe("423 Locked", () => {
     expect(error.message).toEqual("Locked");
   });
 
-  test("customized error message", () => {
+  test("custom error message", () => {
     const error = new LockedError("Test");
     expect(error.status).toEqual(423);
     expect(error.message).toEqual("Test");

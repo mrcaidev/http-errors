@@ -8,7 +8,7 @@ describe("424 Failed Dependency", () => {
     expect(error.message).toEqual("Failed Dependency");
   });
 
-  test("customized error message", () => {
+  test("custom error message", () => {
     const error = new FailedDependencyError("Test");
     expect(error.status).toEqual(424);
     expect(error.message).toEqual("Test");

@@ -8,7 +8,7 @@ describe("507 Insufficient Storage", () => {
     expect(error.message).toEqual("Insufficient Storage");
   });
 
-  test("customized error message", () => {
+  test("custom error message", () => {
     const error = new InsufficientStorageError("Test");
     expect(error.status).toEqual(507);
     expect(error.message).toEqual("Test");
